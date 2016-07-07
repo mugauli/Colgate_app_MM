@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Colgate</string>
+    <!-- Multiprotección MP -->
+    <string name="mp1">¿Notas enrojecimiento o sangrado en las encías al comer o cepillarte?</string>
+    <string name="mp2">¿Padeces de diabetes, hipertensión o alguna enfermedad metabólica?</string>
+    <!-- Sensibilidad SS -->
+    <string name="ss1">¿Experimentas dolor al ingerir bebidas frías, ácidas o dulces?</string>
+    <string name="ss2">¿Notas que tus encías se han recogido con el tiempo?</string>
+    <!-- Blancura WH -->
+    <string name="wh1">¿Regularmente fumas, tomas café, vino o consumes chocolate?</string>
+    <string name="wh2">¿Te preocupa el color de tus dientes?</string>
+    <!-- Frescura FR-->
+    <string name="fr1">¿Has notado que en momentos del día padeces mal aliento?</string>
+    <string name="fr2">¿Has notado una coloración amarilla o blanquecina  en la lengua?</string>
+
+    <string name="title_activity_tusdatos">tusdatos</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>
