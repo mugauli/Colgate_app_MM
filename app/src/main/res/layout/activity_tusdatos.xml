@@ -1,65 +1,112 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondorojo"
     tools:context="net.grapesoft.www.colgate.tusdatos">
-    <ImageView
-        android:src="@drawable/fondo"
-        android:scaleType="fitCenter"
-        android:layout_height="fill_parent"
-        android:layout_width="fill_parent"/>
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/fondo"
+        android:layout_margin="30dp"
+        android:weightSum="90">
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="30">
 
-            <TextView
+            <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView"
-                style="@style/spinnerItemStyle"/>
+                android:id="@+id/imageView2"
+                android:layout_gravity="left|top"
+                android:src="@drawable/datos"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp" />
+        </LinearLayout>
 
-            <Spinner
-                android:layout_width="126dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner"
-                android:layout_gravity="center"
-                android:background="@drawable/drop"
-                />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="30">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Sexo:"
+                    android:id="@+id/tvSexo"
+                    style="@style/spinnerItemStyle"/>
+
+                <Spinner
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spSexo"
+                    android:layout_gravity="center"
+                    android:background="@drawable/drop"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Edad:"
+                    android:id="@+id/tvEdad" />
+
+                <Spinner
+                    android:layout_width="279dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spEdad"
+                    android:layout_gravity="center"
+                    android:background="@drawable/drop"
+                  />
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="30"
+            android:weightSum="10">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="3"></LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Large Text"
-                android:id="@+id/textView2" />
+                android:id="@+id/btnIr"
+                android:layout_gravity="right|bottom"
+                android:src="@drawable/ir"
 
-            <Spinner
-                android:layout_width="279dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/spinner2"
-                android:layout_gravity="center"
-                android:background="@drawable/drop"
-              />
-
+                android:layout_weight="7"
+                android:layout_margin="10dp"
+                android:layout_marginBottom=".3dp" />
         </LinearLayout>
+
     </LinearLayout>
 
 
-</FrameLayout>
+</RelativeLayout>
