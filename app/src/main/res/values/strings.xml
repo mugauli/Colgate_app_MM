@@ -17,11 +17,11 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
-            <string-array name="sexo">
-            <item>Masculino</item>
-            <item>Femenino</item>
-
-        </string-array>
-
+    <string-array name="sexo">
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+    <string name="edad_minimo">15</string>
+    <string name="edad_maximo">85</string>
 
 </resources>

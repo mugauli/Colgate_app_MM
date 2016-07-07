@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import java.util.LinkedList;
+
 
 public class tusdatos extends AppCompatActivity {
 
@@ -26,6 +28,24 @@ public class tusdatos extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
       //Le indicamos al spinner el adaptador a usar
         spiner_sexo.setAdapter(adapter);
+
+        Spinner spiner_edad = (Spinner) findViewById(R.id.spEdad);
+
+        LinkedList edades = new LinkedList();
+        int edad_minima = Integer.parseInt(getString(R.string.edad_minimo));
+        int edad_maxima = Integer.parseInt(getString(R.string.edad_maximo));
+
+        for(int i = edad_minima ; i<edad_maxima;i++)
+        {
+            edades.add(new edad(i, i + " años"));
+        }
+
+        ArrayAdapter adapter_edad = new ArrayAdapter(this, android.R.layout.simple_spinner_item, edades);
+
+
+        adapter_edad.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spiner_edad.setAdapter(adapter_edad);
+
 
 
         ImageView btnIr = (ImageView) findViewById(R.id.btnIr);
