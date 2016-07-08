@@ -1,24 +1,147 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondorojo"
-    tools:context="net.grapesoft.www.colgate.MainActivity">
-
-    <ImageView
-        android:src="@drawable/fondo"
-        android:scaleType="fitCenter"
-        android:layout_height="fill_parent"
-        android:layout_width="fill_parent"/>
+    tools:context="net.grapesoft.www.colgate.tusdatos">
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:weightSum="100"
-        android:layout_height="match_parent">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/fondo"
+        android:layout_margin="30dp"
+        android:weightSum="90"
+        android:padding="50dp">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:weightSum="10"
+                android:layout_margin="30dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ImgDatos"
+                    android:src="@drawable/diente"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Considero como prioridad en mi cuidado bucal:"
+                    android:id="@+id/tvTitulo"
+                    android:textColor="#ffffff"
+                    android:textSize="50dp"
+                    android:layout_margin="10dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnIr"
+                android:layout_gravity="right|bottom"
+                android:src="@drawable/ir"
+
+                android:layout_weight="7"
+                android:layout_margin="10dp"
+                android:layout_marginBottom=".3dp" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="30"
+                android:weightSum="10">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:weightSum="10"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Sexo:"
+                        android:id="@+id/tvSexo"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        android:padding="10dp"
+                        android:textColor="#ffffff"
+                        android:textSize="45dp" />
+
+                    <Spinner
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spSexo"
+                        android:layout_gravity="center"
+                        android:background="@drawable/drop"
+                        android:layout_weight="3"
+                        android:padding="10dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"></LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:weightSum="10"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Edad:"
+                        android:id="@+id/tvEdad"
+                        android:layout_weight="3"
+                        android:textAlignment="textEnd"
+                        android:padding="10dp"
+                        android:textSize="45dp"
+                        android:textColor="#ffffff" />
+
+                    <Spinner
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spEdad"
+                        android:layout_gravity="center"
+                        android:background="@drawable/drop"
+                        android:layout_weight="3"
+                        android:padding="10dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"></LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
 
     </LinearLayout>
 
-</FrameLayout>
+
+</RelativeLayout>

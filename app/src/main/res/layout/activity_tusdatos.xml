@@ -24,7 +24,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/ImgDatos"
                 android:layout_gravity="left|top"
-                android:src="@drawable/datos" />
+                android:src="@drawable/datos"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
