@@ -1,24 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondorojo"
-    tools:context="net.grapesoft.www.colgate.MainActivity">
-
-    <ImageView
-        android:src="@drawable/fondo"
-        android:scaleType="fitCenter"
-        android:layout_height="fill_parent"
-        android:layout_width="fill_parent"/>
+    tools:context="net.grapesoft.www.colgate.video">
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/fondo"
+        android:layout_margin="30dp"
         android:weightSum="100"
-        android:layout_height="match_parent">
+        android:padding="75dp">
 
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Contesta las siguientes preguntas para identificar tu régimen:"
+            android:id="@+id/tvTituloVideo"
+            android:width="80dp"
+            android:layout_weight="80"
+            android:layout_marginLeft="25dp"
+            android:textColor="@android:color/white"
+            android:textIsSelectable="false"
+            android:textSize="40dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="20">
+
+
+        </FrameLayout>
 
     </LinearLayout>
 
-</FrameLayout>
+
+</RelativeLayout>

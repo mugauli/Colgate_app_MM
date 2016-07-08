@@ -1,32 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-     android:background="@drawable/fondorojo"
-    tools:context="net.grapesoft.www.colgate.MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/fondorojo"
+tools:context="net.grapesoft.www.colgate.MainActivity">
 
-        <ImageView
-            android:src="@drawable/fondo"
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo"
+    android:layout_margin="30dp"
+    android:weightSum="100"
+    android:padding="50dp">
+
+    <ImageView
+            android:src="@drawable/portada"
             android:scaleType="fitCenter"
             android:layout_height="fill_parent"
-            android:layout_width="fill_parent"/>
+            android:gravity="center"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_width="fill_parent"
+        android:layout_weight="30" />
 
     <ImageView
-        android:src="@drawable/portada"
-        android:scaleType="fitCenter"
-        android:layout_height="350dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_width="350dp"/>
-    <ImageView
-        android:src="@drawable/botonentrar"
-        android:scaleType="fitCenter"
-        android:layout_height="100dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_marginTop="150dp"
-        android:layout_width="100dp"
-        android:id="@+id/btnEntrar"
-        android:onClick="funcion12"/>
-    </FrameLayout>
+            android:src="@drawable/botonentrar"
+            android:scaleType="fitCenter"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+        android:layout_width="fill_parent"
+            android:id="@+id/btnEntrar"
+            android:onClick="funcion12"
+        android:layout_weight="70" />
+
+</LinearLayout>
+
+
+</RelativeLayout>
