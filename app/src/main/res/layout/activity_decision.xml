@@ -108,7 +108,6 @@
                     android:layout_weight="5"
                     android:weightSum="10"
                     android:padding="10dp">
-
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
@@ -120,7 +119,6 @@
                         android:padding="10dp"
                         android:textSize="45dp"
                         android:textColor="#ffffff" />
-
                     <Spinner
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
@@ -129,7 +127,6 @@
                         android:background="@drawable/drop"
                         android:layout_weight="3"
                         android:padding="10dp" />
-
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="fill_parent"
