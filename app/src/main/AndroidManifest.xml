@@ -32,7 +32,8 @@
             android:label="@string/title_activity_tusdatos"
             android:theme="@style/FullscreenTheme" />
         <activity android:name=".sana" />
-        <activity android:name=".sanados"></activity>
+        <activity android:name=".sanados" />
+        <activity android:name=".foto"></activity>
     </application>
 
 </manifest>
