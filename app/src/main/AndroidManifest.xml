@@ -30,7 +30,9 @@
             android:name=".tusdatos"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_tusdatos"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".sana" />
+        <activity android:name=".sanados"></activity>
     </application>
 
 </manifest>
