@@ -14,7 +14,7 @@ import android.view.View;
 
 public class foto extends AppCompatActivity {
 
-
+    static final int PICK_CONTACT_REQUEST = 0;
     private ImageView capturedImage;
 
     @Override
@@ -39,8 +39,10 @@ public class foto extends AppCompatActivity {
 
 
     private void openCamera() {
+
+
         Intent intent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent, 0);
+        startActivityForResult(intent,PICK_CONTACT_REQUEST);
     }
 
     @Override
