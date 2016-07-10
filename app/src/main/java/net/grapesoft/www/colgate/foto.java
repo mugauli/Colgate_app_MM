@@ -54,7 +54,7 @@ public class foto extends AppCompatActivity {
 
         if(resultCode == RESULT_OK) {
             if(data.hasExtra("data")) {
-                Bitmap bp = data.getParcelableExtra("data");
+                final Bitmap bp = data.getParcelableExtra("data");
 
                 Log.e("Imagen Map",bp.toString());
 
@@ -62,86 +62,97 @@ public class foto extends AppCompatActivity {
 
                 btnCamera.setVisibility(View.GONE);
 
-                ImageView  capturedImage1 = (ImageView) findViewById(R.id.capturedImage);
+                final ImageView  capturedImage1 = (ImageView) findViewById(R.id.capturedImage);
 
                 if(bp != null)
-                capturedImage1.setImageBitmap(toGrayscale(bp));
+                    capturedImage1.setImageBitmap(bp);
 
+                final ImageView  e1 = (ImageView) findViewById(R.id.e1);
+                final ImageView  e2 = (ImageView) findViewById(R.id.e2);
+                final ImageView  e3 = (ImageView) findViewById(R.id.e3);
+                final ImageView  e4 = (ImageView) findViewById(R.id.e4);
+                final ImageView  e5 = (ImageView) findViewById(R.id.e5);
+
+                new CountDownTimer(500, 100) { // 5000 = 5 sec
+
+                    public void onTick(long millisUntilFinished) {
+                    }
+
+                    public void onFinish() {
+
+
+                        capturedImage1.setImageBitmap(toGrayscale(bp));
+                        e5.setImageResource(R.drawable.raya2);
+                    }
+                }.start();
+
+                new CountDownTimer(1000, 100) { // 5000 = 5 sec
+
+                    public void onTick(long millisUntilFinished) {
+                    }
+
+                    public void onFinish() {
+                        capturedImage1.setImageBitmap(bp);
+                        e5.setVisibility(View.GONE);
+                        e4.setImageResource(R.drawable.raya2);
+                    }
+                }.start();
+
+                new CountDownTimer(1500, 100) { // 5000 = 5 sec
+
+                    public void onTick(long millisUntilFinished) {
+                    }
+
+                    public void onFinish() {
+                        capturedImage1.setImageBitmap(toGrayscale(bp));
+                        e4.setVisibility(View.GONE);
+                        e3.setImageResource(R.drawable.raya2);
+                    }
+                }.start();
+
+                new CountDownTimer(2000, 100) { // 5000 = 5 sec
+
+                    public void onTick(long millisUntilFinished) {
+                    }
+
+                    public void onFinish() {
+                        capturedImage1.setImageBitmap(bp);
+                        e3.setVisibility(View.GONE);
+                        e2.setImageResource(R.drawable.raya2);
+                    }
+                }.start();
+
+                new CountDownTimer(2500, 100) { // 5000 = 5 sec
+
+                    public void onTick(long millisUntilFinished) {
+                    }
+
+                    public void onFinish() {
+                        capturedImage1.setImageBitmap(toGrayscale(bp));
+                        e2.setVisibility(View.GONE);
+                        e1.setImageResource(R.drawable.raya2);
+
+                    }
+                }.start();
+
+                new CountDownTimer(3000, 100) { // 5000 = 5 sec
+
+                    public void onTick(long millisUntilFinished) {
+                    }
+
+                    public void onFinish() {
+                        capturedImage1.setImageBitmap(bp);
+                        e1.setVisibility(View.GONE);
+                        Intent i = new Intent(foto.this,video.class);
+                        startActivity(i);
+
+                    }
+                }.start();
             }
         }
-        final ImageView  e1 = (ImageView) findViewById(R.id.e1);
-        final ImageView  e2 = (ImageView) findViewById(R.id.e2);
-        final ImageView  e3 = (ImageView) findViewById(R.id.e3);
-        final ImageView  e4 = (ImageView) findViewById(R.id.e4);
-        final ImageView  e5 = (ImageView) findViewById(R.id.e5);
 
-        new CountDownTimer(500, 100) { // 5000 = 5 sec
 
-            public void onTick(long millisUntilFinished) {
-            }
 
-            public void onFinish() {
-                e5.setImageResource(R.drawable.raya2);
-            }
-        }.start();
-
-        new CountDownTimer(1000, 100) { // 5000 = 5 sec
-
-            public void onTick(long millisUntilFinished) {
-            }
-
-            public void onFinish() {
-                e5.setVisibility(View.GONE);
-                e4.setImageResource(R.drawable.raya2);
-            }
-        }.start();
-
-        new CountDownTimer(1500, 100) { // 5000 = 5 sec
-
-            public void onTick(long millisUntilFinished) {
-            }
-
-            public void onFinish() {
-                e4.setVisibility(View.GONE);
-                e3.setImageResource(R.drawable.raya2);
-            }
-        }.start();
-
-        new CountDownTimer(2000, 100) { // 5000 = 5 sec
-
-            public void onTick(long millisUntilFinished) {
-            }
-
-            public void onFinish() {
-                e3.setVisibility(View.GONE);
-                e2.setImageResource(R.drawable.raya2);
-            }
-        }.start();
-
-        new CountDownTimer(2500, 100) { // 5000 = 5 sec
-
-            public void onTick(long millisUntilFinished) {
-            }
-
-            public void onFinish() {
-                e2.setVisibility(View.GONE);
-                e1.setImageResource(R.drawable.raya2);
-
-            }
-        }.start();
-
-        new CountDownTimer(3000, 100) { // 5000 = 5 sec
-
-            public void onTick(long millisUntilFinished) {
-            }
-
-            public void onFinish() {
-                e1.setVisibility(View.GONE);
-                Intent i = new Intent(foto.this,video.class);
-                startActivity(i);
-
-            }
-        }.start();
 
     }
     public Bitmap toGrayscale(Bitmap bmpOriginal)
