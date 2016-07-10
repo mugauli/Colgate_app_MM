@@ -33,11 +33,7 @@ public class foto extends AppCompatActivity {
                 }
             });
         }
-
-
     }
-
-
     private void openCamera() {
 
 
@@ -49,10 +45,24 @@ public class foto extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO Auto-generated method stub
         super.onActivityResult(requestCode, resultCode, data);
+
         if(resultCode == RESULT_OK) {
-            Bitmap bp = (Bitmap) data.getExtras().get("data");
-            capturedImage.setImageBitmap(bp);
+            if(data.hasExtra("data")) {
+                Bitmap bp = data.getParcelableExtra("data");
+
+                Log.e("Imagen Map",bp.toString());
+
+                Button btnCamera = (Button) findViewById(R.id.btnCamera);
+
+                btnCamera.setVisibility(View.GONE);
+
+                ImageView  capturedImage1 = (ImageView) findViewById(R.id.capturedImage);
+
+                if(bp != null)
+                capturedImage1.setImageBitmap(bp);
+            }
         }
+
     }
 
 
