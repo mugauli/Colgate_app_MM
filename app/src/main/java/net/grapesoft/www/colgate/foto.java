@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -22,7 +23,7 @@ public class foto extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foto);
 
-        Button btnCamera = (Button) findViewById(R.id.btnCamera);
+        ImageButton btnCamera = (ImageButton) findViewById(R.id.btnCamera);
 
         if (btnCamera != null) {
             btnCamera.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +53,7 @@ public class foto extends AppCompatActivity {
 
                 Log.e("Imagen Map",bp.toString());
 
-                Button btnCamera = (Button) findViewById(R.id.btnCamera);
+                ImageButton btnCamera = (ImageButton) findViewById(R.id.btnCamera);
 
                 btnCamera.setVisibility(View.GONE);
 
