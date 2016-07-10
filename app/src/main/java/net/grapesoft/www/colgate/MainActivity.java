@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
               @Override
               public void onClick(View v) {
                   Log.e("Boton","1");
-                  Intent i = new Intent(MainActivity.this,tusdatos.class);
+                  Intent i = new Intent(MainActivity.this,foto.class);
                   startActivity(i);
               }
           });

@@ -34,20 +34,23 @@
 
 
             <Button
-                android:id="@+id/button_callcamera"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-
-                android:text="FOTO" />
-            <ImageView
-                android:id="@+id/photo_image"
-                android:contentDescription="will vary; image taken from camera"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/button1"
+                android:text="Tomar Foto"
+                android:id="@+id/btnCamera"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="80dp"
-                android:src="@drawable/diente" />
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#ffd3ffe5"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/capturedImage"
+                android:layout_above="@+id/btnCamera">
+
+            </ImageView>
 
         </FrameLayout>
 
