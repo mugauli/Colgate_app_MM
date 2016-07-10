@@ -52,6 +52,10 @@ public class foto extends AppCompatActivity {
 
                 Log.e("Imagen Map",bp.toString());
 
+                Button btnCamera = (Button) findViewById(R.id.btnCamera);
+
+                btnCamera.setVisibility(View.GONE);
+
                 ImageView  capturedImage1 = (ImageView) findViewById(R.id.capturedImage);
 
                 if(bp != null)
