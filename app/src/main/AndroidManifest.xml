@@ -11,27 +11,39 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".datos" />
-        <activity android:name=".decision" />
-        <activity android:name=".caminoWHFR" />
-        <activity android:name=".caminoMPSS" />
-        <activity android:name=".escanea" />
-        <activity android:name=".video" />
+        <activity android:name=".datos"
+            android:screenOrientation="landscape" />
+        <activity android:name=".decision"
+            android:screenOrientation="landscape" />
+        <activity android:name=".caminoWHFR"
+            android:screenOrientation="landscape" />
+        <activity android:name=".caminoMPSS"
+            android:screenOrientation="landscape" />
+        <activity android:name=".escanea"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".video"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".tusdatos"
+            android:screenOrientation="landscape"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_tusdatos"
             android:theme="@style/FullscreenTheme" />
-        <activity android:name=".sana" />
-        <activity android:name=".sanados" />
-        <activity android:name=".foto"></activity>
+        <activity android:name=".sana"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".sanados"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".foto"
+            android:screenOrientation="landscape"
+            ></activity>
     </application>
 
 </manifest>

@@ -23,10 +23,14 @@ public class foto extends AppCompatActivity {
     static final int PICK_CONTACT_REQUEST = 0;
     private ImageView capturedImage;
 
+    String video = "1";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foto);
+
+        video = getIntent().getExtras().getString("video");
 
         ImageButton btnCamera = (ImageButton) findViewById(R.id.btnCamera);
 
@@ -144,6 +148,7 @@ public class foto extends AppCompatActivity {
                         capturedImage1.setImageBitmap(bp);
                         e1.setVisibility(View.GONE);
                         Intent i = new Intent(foto.this,video.class);
+                        i.putExtra("video",video);
                         startActivity(i);
 
                     }

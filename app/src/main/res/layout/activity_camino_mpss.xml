@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondorojo"
-    tools:context="net.grapesoft.www.colgate.video">
+    tools:context="net.grapesoft.www.colgate.caminoMPSS">
 
     <LinearLayout
         android:orientation="vertical"
@@ -98,7 +98,7 @@
                             android:orientation="horizontal">
 
                             <RadioButton
-                                android:id="@+id/radioMale"
+                                android:id="@+id/radioA1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="SI"
@@ -109,12 +109,12 @@
                                 android:layout_marginRight="20dp" />
 
                             <RadioButton
-                                android:id="@+id/radioFemale"
+                                android:id="@+id/radioA2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:button="@null"
                                 android:text="NO"
-                                android:textColor="#ffffff"
+                                android:textColor="#000000"
                                 android:textSize="28dp"
                                 android:layout_marginLeft="20dp" />
 
@@ -190,7 +190,7 @@
                             android:orientation="horizontal" >
 
                             <RadioButton
-                                android:id="@+id/radioButton3"
+                                android:id="@+id/radioB1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="SI"
@@ -201,12 +201,12 @@
                                 android:layout_marginRight="20dp" />
 
                             <RadioButton
-                                android:id="@+id/radioButton4"
+                                android:id="@+id/radioB2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:button="@null"
                                 android:text="NO"
-                                android:textColor="#ffffff"
+                                android:textColor="#000000"
                                 android:textSize="28dp"
                                 android:layout_marginLeft="20dp" />
                         </RadioGroup>
@@ -278,7 +278,7 @@
                             android:orientation="horizontal" >
 
                             <RadioButton
-                                android:id="@+id/radioButton5"
+                                android:id="@+id/radioC1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="SI"
@@ -289,12 +289,12 @@
                                 android:layout_marginRight="20dp" />
 
                             <RadioButton
-                                android:id="@+id/radioButton6"
+                                android:id="@+id/radioC2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:button="@null"
                                 android:text="NO"
-                                android:textColor="#ffffff"
+                                android:textColor="#000000"
                                 android:textSize="28dp"
                                 android:layout_marginLeft="20dp" />
                         </RadioGroup>
@@ -366,7 +366,7 @@
                             android:orientation="horizontal" >
 
                             <RadioButton
-                                android:id="@+id/radioButton"
+                                android:id="@+id/radioD1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="SI"
@@ -377,12 +377,12 @@
                                 android:layout_marginRight="20dp" />
 
                             <RadioButton
-                                android:id="@+id/radioButton2"
+                                android:id="@+id/radioD2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:button="@null"
                                 android:text="NO"
-                                android:textColor="#ffffff"
+                                android:textColor="#000000"
                                 android:textSize="28dp"
                                 android:layout_marginLeft="20dp" />
                         </RadioGroup>

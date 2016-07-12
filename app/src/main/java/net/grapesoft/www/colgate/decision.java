@@ -31,7 +31,7 @@ public class decision extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    Intent i = new Intent(decision.this,video.class);
+                    Intent i = new Intent(decision.this,caminoWHFR.class);
                     startActivity(i);
                 }
             });
