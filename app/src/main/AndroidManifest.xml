@@ -15,7 +15,6 @@
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -31,12 +30,8 @@
             android:screenOrientation="landscape"/>
         <activity android:name=".video"
             android:screenOrientation="landscape"/>
-        <activity
-            android:name=".tusdatos"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_tusdatos"
-            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".tusdatos"
+            android:screenOrientation="landscape"/>
         <activity android:name=".sana"
             android:screenOrientation="landscape"/>
         <activity android:name=".sanados"

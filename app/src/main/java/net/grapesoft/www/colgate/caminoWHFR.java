@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.RadioButton;
 
 public class caminoWHFR extends AppCompatActivity {
@@ -14,6 +15,10 @@ public class caminoWHFR extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camino_whfr);
+
+
+        //Quitamos barra de notificaciones
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
         final RadioButton radioA1 = (RadioButton)findViewById(R.id.radioA1);

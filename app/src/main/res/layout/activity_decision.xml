@@ -106,7 +106,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="La solud y prevención de problemas dentales"
+                        android:text="La salud y prevención de problemas dentales."
                         android:id="@+id/tvOpcion2"
                         android:layout_weight="5"
                         android:padding="10dp"
