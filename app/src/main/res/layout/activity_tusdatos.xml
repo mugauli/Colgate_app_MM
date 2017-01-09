@@ -79,7 +79,8 @@
                         android:layout_height="match_parent"
                         android:layout_weight="5"
                         android:weightSum="10"
-                        android:padding="10dp">
+                        android:padding="10dp"
+                        android:id="@+id/lytSexo">
 
                         <TextView
                             android:layout_width="fill_parent"
@@ -111,7 +112,8 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="5"
                         android:weightSum="10"
-                        android:padding="10dp">
+                        android:padding="10dp"
+                        android:id="@+id/lytEdad">
 
                         <TextView
                             android:layout_width="fill_parent"

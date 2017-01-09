@@ -4,9 +4,13 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class caminoMPSS extends AppCompatActivity {
 
@@ -118,7 +122,38 @@ public class caminoMPSS extends AppCompatActivity {
                 siguiente();
             }
         });
-    }
+
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+
+        int height = metrics.heightPixels; // alto absoluto en pixels
+        Log.e("tamaño","-"+height);
+        TextView tvTituloVideo = (TextView) findViewById(R.id.tvTituloVideo);
+
+        TextView tvOpcion1 = (TextView) findViewById(R.id.tvOpcion1);
+        TextView tvOpcion2 = (TextView) findViewById(R.id.tvOpcion2);
+        LinearLayout lytTitulo = (LinearLayout) findViewById(R.id.lytTitulo);
+
+        if(height>800) {
+            if (tvTituloVideo  != null) tvTituloVideo.setTextSize(17);
+            if (tvOpcion1 != null) {
+                tvOpcion1.setTextSize(13);
+                tvOpcion1.setPadding(0, 0, 0, 0);
+                llOpcion1.setPadding(0, 0, 0, 0);
+            }
+            if (tvOpcion2 != null) {
+                tvOpcion2.setTextSize(13);
+                tvOpcion2.setPadding(0,0,0,0);
+                llOpcion2.setPadding(0,0,0,0);
+            }
+            if (lytTitulo != null) lytTitulo.setPadding(0,0,0,0);
+
+        }else
+        {
+
+        }
 
     public void siguiente()
     {

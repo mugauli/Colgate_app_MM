@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -56,17 +57,26 @@ public class tusdatos extends AppCompatActivity {
         TextView tvEdad = (TextView) findViewById(R.id.tvEdad);
         TextView tvSexo = (TextView) findViewById(R.id.tvSexo);
         Spinner spEdad = (Spinner) findViewById(R.id.spEdad);
-        Spinner spSexo = (Spinner) findViewById(R.id.tvSexo);
+        Spinner spSexo = (Spinner) findViewById(R.id.spSexo);
+
+        LinearLayout lytEdad = (LinearLayout) findViewById(R.id.lytEdad);
+        LinearLayout lytSexo = (LinearLayout) findViewById(R.id.lytSexo);
+
+        if(height>730)
+        {
+            if (lytSexo != null) lytSexo.setPadding(35,35,35,35);
+            if (lytEdad != null) lytEdad.setPadding(35,35,35,35);
+        }
         if(height>600) {
-            if (tvEdad != null) tvEdad.setTextSize(20);
-            if (tvSexo != null) tvSexo.setTextSize(20);
+            if (tvEdad != null) tvEdad.setTextSize(19);
+            if (tvSexo != null) tvSexo.setTextSize(19);
         }else
         {
             if (tvEdad != null) tvEdad.setTextSize(50);
             if (tvSexo != null) tvSexo.setTextSize(50);
 
-        }
 
+        }
 
         ArrayAdapter adapter_edad = new ArrayAdapter(this, android.R.layout.simple_spinner_item, edades);
 
