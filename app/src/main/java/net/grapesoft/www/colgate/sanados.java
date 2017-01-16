@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class sanados extends AppCompatActivity {
@@ -14,16 +14,14 @@ public class sanados extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sanados);
 
-        //Quitamos barra de notificaciones
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         LinearLayout llOpcion1 = (LinearLayout) findViewById(R.id.llOpcion1);
 
         if (llOpcion1 != null) {
             llOpcion1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    ImageView img= (ImageView) findViewById(R.id.imageView);
+                    img.setImageResource(R.drawable.vinetase);
                     Intent i = new Intent(sanados.this,foto.class);
                     i.putExtra("video","3");
                     startActivity(i);
@@ -36,11 +34,23 @@ public class sanados extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
+                    ImageView img= (ImageView) findViewById(R.id.imageView2);
+                    img.setImageResource(R.drawable.vinetase);
                     Intent i = new Intent(sanados.this,foto.class);
                     i.putExtra("video","4");
                     startActivity(i);
                 }
             });
         }
+    }
+    @Override
+    protected void onRestart() {
+        super.onRestart();  // Always call the superclass method first
+
+        // Activity being restarted from stopped state
+        ImageView img= (ImageView) findViewById(R.id.imageView);
+        img.setImageResource(R.drawable.vineta);
+        ImageView img2= (ImageView) findViewById(R.id.imageView2);
+        img2.setImageResource(R.drawable.vineta);
     }
 }

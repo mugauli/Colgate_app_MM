@@ -7,7 +7,7 @@
     tools:context="net.grapesoft.www.colgate.MainActivity">
 
     <ImageView
-        android:src="@drawable/fondo"
+        android:src="@drawable/fondo16"
         android:scaleType="fitCenter"
         android:layout_height="fill_parent"
         android:layout_width="fill_parent"/>

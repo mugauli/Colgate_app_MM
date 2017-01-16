@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/fondo"
+        android:background="@drawable/fondo16"
         android:layout_margin="30dp"
         android:weightSum="90"
         android:padding="50dp">

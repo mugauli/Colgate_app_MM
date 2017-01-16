@@ -1,11 +1,13 @@
 package net.grapesoft.www.colgate;
 
+import android.content.Intent;
 import android.media.session.MediaController;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
-import android.view.WindowManager;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -15,9 +17,6 @@ public class video extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
-
-        //Quitamos barra de notificaciones
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         VideoView videoView = (VideoView) findViewById(R.id.VideoView);
         String  video = getIntent().getExtras().getString("video");
@@ -49,5 +48,26 @@ public class video extends AppCompatActivity {
         videoView.setMediaController(new android.widget.MediaController(this));
         videoView.start();
 
+        ImageView btnIr = (ImageView) findViewById(R.id.btnIr);
+
+
+        if (btnIr != null) {
+            btnIr.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent i = new Intent(video.this,MainActivity.class);
+                    startActivity(i);
+                }
+            });
+        }
+
+
+
     }
+
+        /*Intent i = new Intent(video.this, MainActivity.class);
+        startActivity(i);*/
+        //Nuestro código a ejecutar en este momento
+
 }

@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="@drawable/fondo"
+        android:background="@drawable/fondo16"
         android:layout_margin="20dp"
         android:weightSum="100"
         android:paddingTop="10dp"
@@ -72,6 +72,7 @@
                         android:text="@string/wh1"
                         android:id="@+id/textView"
                         android:layout_weight="40"
+                        android:textSize="23dp"
                         android:textColor="@android:color/white"
                         android:padding="0dp" />
 
@@ -164,6 +165,7 @@
                         android:text="@string/wh2"
                         android:id="@+id/textView3"
                         android:layout_weight="40"
+                        android:textSize="23dp"
                         android:textColor="@android:color/white"
                         android:padding="0dp" />
 
@@ -252,6 +254,7 @@
                         android:text="@string/fr1"
                         android:id="@+id/textView4"
                         android:layout_weight="40"
+                        android:textSize="23dp"
                         android:textColor="@android:color/white"
                         android:padding="0dp" />
 
@@ -340,6 +343,7 @@
                         android:text="@string/fr2"
                         android:id="@+id/textView2"
                         android:layout_weight="40"
+                        android:textSize="23dp"
                         android:textColor="@android:color/white"
                         android:padding="0dp" />
 

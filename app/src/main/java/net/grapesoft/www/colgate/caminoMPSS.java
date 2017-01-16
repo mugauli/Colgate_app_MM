@@ -15,6 +15,9 @@ import android.widget.TextView;
 public class caminoMPSS extends AppCompatActivity {
 
     boolean aa = false,bb = false,cc= false, dd = false;
+    private int [] aux = new int[2];
+    private int [] aux2  = new int[2];
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +29,6 @@ public class caminoMPSS extends AppCompatActivity {
 
         final RadioButton radioA1 = (RadioButton)findViewById(R.id.radioA1);
         final RadioButton radioA2 = (RadioButton)findViewById(R.id.radioA2);
-
         final RadioButton radioB1 = (RadioButton)findViewById(R.id.radioB1);
         final RadioButton radioB2 = (RadioButton)findViewById(R.id.radioB2);
         final RadioButton radioC1 = (RadioButton)findViewById(R.id.radioC1);
@@ -40,7 +42,11 @@ public class caminoMPSS extends AppCompatActivity {
                 RadioButton a = (RadioButton)v;
                 a.setTextColor(Color.WHITE);
                 radioA2.setTextColor(Color.BLACK);
-                aa = true;
+
+                    aa = true;
+                    aux[0]=1;
+
+
                 siguiente();
             }
         });
@@ -53,6 +59,7 @@ public class caminoMPSS extends AppCompatActivity {
                 a.setTextColor(Color.WHITE);
                 radioA1.setTextColor(Color.BLACK);
                 aa = true;
+                aux[0]=2;
                 siguiente();
 
             }
@@ -64,6 +71,7 @@ public class caminoMPSS extends AppCompatActivity {
                 a.setTextColor(Color.WHITE);
                 radioB2.setTextColor(Color.BLACK);
                 bb = true;
+                aux[1]=1;
                 siguiente();
             }
         });
@@ -72,10 +80,10 @@ public class caminoMPSS extends AppCompatActivity {
             public void onClick(View v) {
 
                 RadioButton a = (RadioButton)v;
-
+                bb = true;
+                aux[1]=2;
                 a.setTextColor(Color.WHITE);
                 radioB1.setTextColor(Color.BLACK);
-                bb = true;
                 siguiente();
             }
         });
@@ -86,6 +94,7 @@ public class caminoMPSS extends AppCompatActivity {
                 a.setTextColor(Color.WHITE);
                 radioC2.setTextColor(Color.BLACK);
                 cc = true;
+                aux2[0]=1;
                 siguiente();
             }
         });
@@ -94,10 +103,11 @@ public class caminoMPSS extends AppCompatActivity {
             public void onClick(View v) {
 
                 RadioButton a = (RadioButton)v;
-
+                cc = true;
+                aux2[0]=2;
                 a.setTextColor(Color.WHITE);
                 radioC1.setTextColor(Color.BLACK);
-                cc = true;
+
                 siguiente();
             }
         });
@@ -108,6 +118,7 @@ public class caminoMPSS extends AppCompatActivity {
                 a.setTextColor(Color.WHITE);
                 radioD2.setTextColor(Color.BLACK);
                 dd = true;
+                aux2[1]=1;
                 siguiente();
             }
         });
@@ -119,6 +130,7 @@ public class caminoMPSS extends AppCompatActivity {
                 a.setTextColor(Color.WHITE);
                 radioD1.setTextColor(Color.BLACK);
                 dd = true;
+                aux2[1]=2;
                 siguiente();
             }
         });
@@ -157,11 +169,44 @@ public class caminoMPSS extends AppCompatActivity {
 
     public void siguiente()
     {
-        if(aa&&bb&&cc&&dd)
+        int cont1=0,cont2=0;
+        if(aa&&bb&&cc&&dd) {
+            for (int j = 0; j <2 ; j++) {
+               if(aux[j] == 1) {
+
+                   cont1++;
+               }
+                if(aux2[j]==1){
+                    cont2++;
+                }
+
+            }
+            if (cont1 == cont2) {
+
+                Intent i = new Intent(caminoMPSS.this, sana.class);
+                startActivity(i);
+            }
+            if (cont1 < cont2) {
+
+                Intent i = new Intent(caminoMPSS.this, foto.class);
+                i.putExtra("video", "2");
+                startActivity(i);
+            }
+            if(cont2 < cont1) {
+
+                Intent i = new Intent(caminoMPSS.this, foto.class);
+                i.putExtra("video", "1");
+                startActivity(i);
+            }
+
+
+        }
+
+        /*if(aa&&bb&&cc&&dd)
         {
             Intent i = new Intent(caminoMPSS.this,sana.class);
             startActivity(i);
-        }
+        }*/
     }
 
 
