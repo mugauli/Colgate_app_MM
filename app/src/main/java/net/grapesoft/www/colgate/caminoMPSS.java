@@ -24,20 +24,20 @@ public class caminoMPSS extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
-        final RadioButton radioA1 = (RadioButton)findViewById(R.id.radioA1);
-        final RadioButton radioA2 = (RadioButton)findViewById(R.id.radioA2);
+        final RadioButton radioA1 = (RadioButton) findViewById(R.id.radioA1);
+        final RadioButton radioA2 = (RadioButton) findViewById(R.id.radioA2);
 
-        final RadioButton radioB1 = (RadioButton)findViewById(R.id.radioB1);
-        final RadioButton radioB2 = (RadioButton)findViewById(R.id.radioB2);
-        final RadioButton radioC1 = (RadioButton)findViewById(R.id.radioC1);
-        final RadioButton radioC2 = (RadioButton)findViewById(R.id.radioC2);
-        final RadioButton radioD1 = (RadioButton)findViewById(R.id.radioD1);
-        final RadioButton radioD2 = (RadioButton)findViewById(R.id.radioD2);
+        final RadioButton radioB1 = (RadioButton) findViewById(R.id.radioB1);
+        final RadioButton radioB2 = (RadioButton) findViewById(R.id.radioB2);
+        final RadioButton radioC1 = (RadioButton) findViewById(R.id.radioC1);
+        final RadioButton radioC2 = (RadioButton) findViewById(R.id.radioC2);
+        final RadioButton radioD1 = (RadioButton) findViewById(R.id.radioD1);
+        final RadioButton radioD2 = (RadioButton) findViewById(R.id.radioD2);
 
         radioA1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RadioButton a = (RadioButton)v;
+                RadioButton a = (RadioButton) v;
                 a.setTextColor(Color.WHITE);
                 radioA2.setTextColor(Color.BLACK);
                 aa = true;
@@ -48,7 +48,7 @@ public class caminoMPSS extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                RadioButton a = (RadioButton)v;
+                RadioButton a = (RadioButton) v;
 
                 a.setTextColor(Color.WHITE);
                 radioA1.setTextColor(Color.BLACK);
@@ -60,7 +60,7 @@ public class caminoMPSS extends AppCompatActivity {
         radioB1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RadioButton a = (RadioButton)v;
+                RadioButton a = (RadioButton) v;
                 a.setTextColor(Color.WHITE);
                 radioB2.setTextColor(Color.BLACK);
                 bb = true;
@@ -71,7 +71,7 @@ public class caminoMPSS extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                RadioButton a = (RadioButton)v;
+                RadioButton a = (RadioButton) v;
 
                 a.setTextColor(Color.WHITE);
                 radioB1.setTextColor(Color.BLACK);
@@ -82,7 +82,7 @@ public class caminoMPSS extends AppCompatActivity {
         radioC1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RadioButton a = (RadioButton)v;
+                RadioButton a = (RadioButton) v;
                 a.setTextColor(Color.WHITE);
                 radioC2.setTextColor(Color.BLACK);
                 cc = true;
@@ -93,7 +93,7 @@ public class caminoMPSS extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                RadioButton a = (RadioButton)v;
+                RadioButton a = (RadioButton) v;
 
                 a.setTextColor(Color.WHITE);
                 radioC1.setTextColor(Color.BLACK);
@@ -104,7 +104,7 @@ public class caminoMPSS extends AppCompatActivity {
         radioD1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RadioButton a = (RadioButton)v;
+                RadioButton a = (RadioButton) v;
                 a.setTextColor(Color.WHITE);
                 radioD2.setTextColor(Color.BLACK);
                 dd = true;
@@ -115,7 +115,7 @@ public class caminoMPSS extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                RadioButton a = (RadioButton)v;
+                RadioButton a = (RadioButton) v;
                 a.setTextColor(Color.WHITE);
                 radioD1.setTextColor(Color.BLACK);
                 dd = true;
@@ -129,32 +129,31 @@ public class caminoMPSS extends AppCompatActivity {
 
 
         int height = metrics.heightPixels; // alto absoluto en pixels
-        Log.e("tamaño","-"+height);
+        Log.e("tamaño", "-" + height);
         TextView tvTituloVideo = (TextView) findViewById(R.id.tvTituloVideo);
 
         TextView tvOpcion1 = (TextView) findViewById(R.id.tvOpcion1);
         TextView tvOpcion2 = (TextView) findViewById(R.id.tvOpcion2);
         LinearLayout lytTitulo = (LinearLayout) findViewById(R.id.lytTitulo);
 
-        if(height>800) {
-            if (tvTituloVideo  != null) tvTituloVideo.setTextSize(17);
+        if (height > 800) {
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(17);
             if (tvOpcion1 != null) {
                 tvOpcion1.setTextSize(13);
                 tvOpcion1.setPadding(0, 0, 0, 0);
-                llOpcion1.setPadding(0, 0, 0, 0);
+                //llOpcion1.setPadding(0, 0, 0, 0);
             }
             if (tvOpcion2 != null) {
                 tvOpcion2.setTextSize(13);
-                tvOpcion2.setPadding(0,0,0,0);
-                llOpcion2.setPadding(0,0,0,0);
+                tvOpcion2.setPadding(0, 0, 0, 0);
+               // llOpcion2.setPadding(0, 0, 0, 0);
             }
-            if (lytTitulo != null) lytTitulo.setPadding(0,0,0,0);
+            if (lytTitulo != null) lytTitulo.setPadding(0, 0, 0, 0);
 
-        }else
-        {
+        } else {
 
         }
-
+    }
     public void siguiente()
     {
         if(aa&&bb&&cc&&dd)
