@@ -6,8 +6,13 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.VideoView;
 
@@ -17,6 +22,9 @@ public class video extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
+
+        //Quitamos barra de notificaciones
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         VideoView videoView = (VideoView) findViewById(R.id.VideoView);
         String  video = getIntent().getExtras().getString("video");
@@ -60,6 +68,56 @@ public class video extends AppCompatActivity {
                     startActivity(i);
                 }
             });
+        }
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+
+        int height = metrics.heightPixels; // alto absoluto en pixels
+        Log.e("DBG: ","Tamaño "+height);
+
+
+        TextView tvTituloVideo = (TextView) findViewById(R.id.tvTituloVideo);
+        LinearLayout lyPrincipal = (LinearLayout) findViewById(R.id.lyPrincipal);
+
+
+        //Tamaño
+
+        if(height<500) {
+
+            Log.e("DBG: ",height + " < 500");
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
+            if (lyPrincipal != null) lyPrincipal.setPadding(65,30,60,20);
+
+
+        } else if(height<580 && height>499) {
+
+            Log.e("DBG: "+height,"580 > " + height + " > 499");
+
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,38);
+            if (lyPrincipal != null) lyPrincipal.setPadding(87,25,87,25);
+
+
+        }
+        else if(height>700 && height< 1200 ) {
+
+            Log.e("DBG: "," 700 < " + height + " < 1200");
+
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,51);
+            if (lyPrincipal != null) lyPrincipal.setPadding(115,40,115,40);
+
+
+
+        }
+        else if(height>1200) {
+
+            Log.e("DBG: ", height +" > 1200");
+
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,33);
+            if (lyPrincipal != null) lyPrincipal.setPadding(200,70,200,70);
+
+
         }
 
 

@@ -4,15 +4,22 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class caminoWHFR extends AppCompatActivity {
 
     boolean aa = false,bb = false,cc= false, dd = false;
     private int [] aux = new int[2];
     private int [] aux2  = new int[2];
+    public int tamanoPregunta = 0,tamanoRadio = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -129,6 +136,87 @@ public class caminoWHFR extends AppCompatActivity {
                 siguiente();
             }
         });
+
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+
+        int height = metrics.heightPixels; // alto absoluto en pixels
+        Log.e("DBG: ","Tamaño "+height);
+        TextView tvTituloVideo = (TextView) findViewById(R.id.tvTituloVideo);
+
+        TextView tvOpcion1 = (TextView) findViewById(R.id.tvOpcion1);
+        TextView tvOpcion2 = (TextView) findViewById(R.id.tvOpcion2);
+        LinearLayout lyPrincipal = (LinearLayout) findViewById(R.id.lyPrincipal);
+
+
+        //Tamaño
+
+        if(height<500) {
+
+            Log.e("DBG: ",height + " < 500");
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
+            if (lyPrincipal != null) lyPrincipal.setPadding(21,10,40,10);
+
+            tamanoPregunta = 10;
+            tamanoRadio = 12;
+
+        } else if(height<580 && height>499) {
+
+            Log.e("DBG "+height,"580 > " + height + " > 499");
+
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,39);
+            if (lyPrincipal != null) lyPrincipal.setPadding(60,10,60,10);
+
+            tamanoPregunta = 22;
+            tamanoRadio = 28;
+
+
+        }
+        else if(height>700 && height< 1200 ) {
+
+            Log.e("DBG: "," 700 < " + height + " < 1200");
+
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,42);
+            if (lyPrincipal != null) lyPrincipal.setPadding(70,10,70,10);
+
+            tamanoPregunta = 28;
+            tamanoRadio = 30;
+        }
+        else if(height>1200) {
+
+            Log.e("DBG: ", height +" > 1200");
+
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+            if (lyPrincipal != null) lyPrincipal.setPadding(70,10,70,10);
+
+            tamanoPregunta = 10;
+            tamanoRadio = 12;
+
+        }
+
+        TextView askB1 = (TextView) findViewById(R.id.askB1);
+        TextView askB2 = (TextView) findViewById(R.id.askB2);
+        TextView askB3 = (TextView) findViewById(R.id.askB3);
+        TextView askB4 = (TextView) findViewById(R.id.askB4);
+
+        if(askB1 != null) askB1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoPregunta);
+        if(askB2 != null) askB2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoPregunta);
+        if(askB3 != null) askB3.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoPregunta);
+        if(askB4 != null) askB4.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoPregunta);
+
+        if(radioA1 != null) radioA1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio);
+        if(radioA2 != null) radioA2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio);
+        if(radioB1 != null) radioB1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio);
+        if(radioB2 != null) radioB2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio);
+        if(radioC1 != null) radioC1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio);
+        if(radioC2 != null) radioC2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio);
+        if(radioD1 != null) radioD1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio);
+        if(radioD2 != null) radioD2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio);
+
+
+
     }
 
     public void siguiente()

@@ -15,7 +15,8 @@
         android:paddingTop="10dp"
         android:paddingRight="60dp"
         android:paddingBottom="10dp"
-        android:paddingLeft="60dp">
+        android:paddingLeft="60dp"
+        android:id="@+id/lyPrincipal">
 
         <TextView
             android:layout_width="fill_parent"
@@ -70,62 +71,65 @@
                         android:layout_height="fill_parent"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/mp1"
-                        android:id="@+id/textView"
-                        android:layout_weight="40"
+                        android:id="@+id/ask1"
+                        android:layout_weight="50"
                         android:textSize="20dp"
                         android:textColor="@android:color/white"
                         android:padding="0dp" />
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="60"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
                         android:weightSum="100"
                         android:padding="0dp">
 
                         <LinearLayout
                             android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30"></LinearLayout>
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="32"></LinearLayout>
 
                         <RadioGroup
                             android:id="@+id/radiopregunta1"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:layout_weight="40"
+                            android:layout_weight="36"
                             android:layout_gravity="center_horizontal"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:weightSum="10">
 
                             <RadioButton
                                 android:id="@+id/radioA1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
                                 android:text="SI"
                                 android:button="@null"
                                 android:checked="true"
                                 android:textColor="#000000"
                                 android:textSize="28dp"
-                                android:layout_marginRight="20dp" />
+                                android:layout_weight="5"
+                                android:textAlignment="center" />
 
                             <RadioButton
                                 android:id="@+id/radioA2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
                                 android:button="@null"
                                 android:text="NO"
                                 android:textColor="#000000"
                                 android:textSize="28dp"
-                                android:layout_marginLeft="20dp" />
+                                android:layout_weight="5"
+                                android:textAlignment="center" />
 
                         </RadioGroup>
 
                         <LinearLayout
                             android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30"></LinearLayout>
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="32"></LinearLayout>
 
                     </LinearLayout>
 
@@ -163,61 +167,64 @@
                         android:layout_height="fill_parent"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/mp2"
-                        android:id="@+id/textView3"
+                        android:id="@+id/ask2"
                         android:textSize="20dp"
-                        android:layout_weight="40"
+                        android:layout_weight="50"
                         android:textColor="@android:color/white"
                         android:padding="0dp" />
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="60"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
                         android:weightSum="100"
                         android:padding="0dp" >
 
                         <LinearLayout
                             android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30" />
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="32" />
 
                         <RadioGroup
                             android:id="@+id/radioGroup2"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:layout_weight="40"
+                            android:layout_weight="36"
                             android:layout_gravity="center_horizontal"
-                            android:orientation="horizontal" >
+                            android:orientation="horizontal"
+                            android:weightSum="10">
 
                             <RadioButton
                                 android:id="@+id/radioB1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
                                 android:text="SI"
                                 android:button="@null"
                                 android:checked="true"
                                 android:textColor="#000000"
                                 android:textSize="28dp"
-                                android:layout_marginRight="20dp" />
+                                android:layout_weight="5"
+                                android:textAlignment="center" />
 
                             <RadioButton
                                 android:id="@+id/radioB2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
                                 android:button="@null"
                                 android:text="NO"
                                 android:textColor="#000000"
                                 android:textSize="28dp"
-                                android:layout_marginLeft="20dp" />
+                                android:layout_weight="5"
+                                android:textAlignment="center" />
                         </RadioGroup>
 
                         <LinearLayout
                             android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30" />
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="32" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -252,61 +259,64 @@
                         android:layout_height="fill_parent"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/ss1"
-                        android:id="@+id/textView4"
-                        android:layout_weight="40"
+                        android:id="@+id/ask3"
+                        android:layout_weight="50"
                         android:textSize="20dp"
                         android:textColor="@android:color/white"
                         android:padding="0dp" />
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="60"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="50"
                         android:weightSum="100"
                         android:padding="0dp" >
 
                         <LinearLayout
                             android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30" />
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="32" />
 
                         <RadioGroup
                             android:id="@+id/radioGroup3"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:layout_weight="40"
+                            android:layout_weight="36"
                             android:layout_gravity="center_horizontal"
-                            android:orientation="horizontal" >
+                            android:orientation="horizontal"
+                            android:weightSum="10">
 
                             <RadioButton
                                 android:id="@+id/radioC1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
                                 android:text="SI"
                                 android:button="@null"
                                 android:checked="true"
                                 android:textColor="#000000"
                                 android:textSize="28dp"
-                                android:layout_marginRight="20dp" />
+                                android:layout_weight="5"
+                                android:textAlignment="center" />
 
                             <RadioButton
                                 android:id="@+id/radioC2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
                                 android:button="@null"
                                 android:text="NO"
                                 android:textColor="#000000"
                                 android:textSize="28dp"
-                                android:layout_marginLeft="20dp" />
+                                android:layout_weight="5"
+                                android:textAlignment="center" />
                         </RadioGroup>
 
                         <LinearLayout
                             android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30" />
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="32" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -341,7 +351,7 @@
                         android:layout_height="fill_parent"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="@string/ss2"
-                        android:id="@+id/textView2"
+                        android:id="@+id/ask4"
                         android:layout_weight="40"
                         android:textSize="20dp"
                         android:textColor="@android:color/white"
@@ -349,53 +359,56 @@
 
                     <LinearLayout
                         android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
                         android:layout_weight="60"
                         android:weightSum="100"
                         android:padding="0dp" >
 
                         <LinearLayout
                             android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30" />
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="32" />
 
                         <RadioGroup
                             android:id="@+id/radioGroup"
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent"
-                            android:layout_weight="40"
+                            android:layout_weight="36"
                             android:layout_gravity="center_horizontal"
-                            android:orientation="horizontal" >
+                            android:orientation="horizontal"
+                            android:weightSum="10">
 
                             <RadioButton
                                 android:id="@+id/radioD1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
                                 android:text="SI"
                                 android:button="@null"
                                 android:checked="true"
                                 android:textColor="#000000"
                                 android:textSize="28dp"
-                                android:layout_marginRight="20dp" />
+                                android:layout_weight="5"
+                                android:textAlignment="center" />
 
                             <RadioButton
                                 android:id="@+id/radioD2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
                                 android:button="@null"
                                 android:text="NO"
                                 android:textColor="#000000"
                                 android:textSize="28dp"
-                                android:layout_marginLeft="20dp" />
+                                android:layout_weight="5"
+                                android:textAlignment="center" />
                         </RadioGroup>
 
                         <LinearLayout
                             android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="30" />
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="32" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

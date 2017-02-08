@@ -12,119 +12,150 @@
         android:background="@drawable/fondo16"
         android:layout_margin="30dp"
         android:weightSum="90"
-        android:padding="50dp">
+        android:id="@+id/lyPrincipal"
+        android:paddingLeft="70dp"
+        android:paddingTop="50dp"
+        android:paddingRight="70dp"
+        android:paddingBottom="50dp">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_gravity="center_horizontal|top"
                 android:weightSum="10"
-                android:layout_margin="30dp">
+                android:layout_weight="7">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
                     android:id="@+id/ImgDatos"
                     android:src="@drawable/dientechico"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_margin="10dp" />
+                    android:layout_weight="9" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Una sonrisa sana es una sonrisa:"
                     android:id="@+id/tvTitulo"
                     android:textColor="#ffffff"
-                    android:textSize="60dp"
-                    android:layout_margin="10dp" />
+                    android:textSize="50dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="6sp" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="600dp"
-                android:layout_height="140dp"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:layout_gravity="center"
-                android:layout_weight="30"
-                android:weightSum="10"
-                android:layout_marginTop="60dp">
+                android:layout_weight="3"
+                android:weightSum="100">
 
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:weightSum="100"
-                    android:padding="10dp"
-                    android:id="@+id/llOpcion1">
-
-                    <ImageView
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:id="@+id/imageView"
-                        android:src="@drawable/vineta"
-                        android:layout_weight="95" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Limpia brillante y protegida."
-                        android:id="@+id/tvOpcion1"
-                        android:layout_weight="5"
-                        android:padding="10dp"
-                        android:textColor="#ffffff"
-                        android:textSize="23dp"
-                        android:paddingLeft="0dp"
-                        android:textIsSelectable="false" />
-
-                </LinearLayout>
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="40"></LinearLayout>
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
                     android:weightSum="100"
-                    android:padding="10dp"
-                    android:id="@+id/llOpcion2">
+                    android:layout_weight="20">
 
-                    <ImageView
+                    <LinearLayout
+                        android:orientation="vertical"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:id="@+id/imageView2"
-                        android:src="@drawable/vineta"
-                        android:layout_weight="95" />
+                        android:layout_weight="25"></LinearLayout>
 
-                    <TextView
+                    <LinearLayout
+                        android:orientation="horizontal"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="Sin dolor"
-                        android:id="@+id/tvOpcion2"
-                        android:layout_weight="5"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="25"
+                        android:weightSum="100"
                         android:padding="10dp"
-                        android:textSize="23dp"
-                        android:textColor="#ffffff" />
+                        android:id="@+id/llOpcion1">
 
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView"
+                            android:src="@drawable/vineta"
+                            android:layout_weight="95" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Limpia, brillante y protegida."
+                            android:id="@+id/tvOpcion1"
+                            android:layout_weight="5"
+                            android:padding="10dp"
+                            android:textColor="#ffffff"
+                            android:textSize="23dp"
+                            android:paddingLeft="0dp"
+                            android:textIsSelectable="false" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="25"
+                        android:weightSum="100"
+                        android:padding="10dp"
+                        android:id="@+id/llOpcion2">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView2"
+                            android:src="@drawable/vineta"
+                            android:layout_weight="95" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="Sin dolor"
+                            android:id="@+id/tvOpcion2"
+                            android:layout_weight="5"
+                            android:padding="10dp"
+                            android:textSize="23dp"
+                            android:textColor="#ffffff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="25"></LinearLayout>
                 </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView4"
+                    android:layout_gravity="right|bottom"
+                    android:src="@drawable/logoactivacionvolante"
+                    android:layout_weight="40" />
 
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="280dp"
-                android:layout_height="146dp"
-                android:id="@+id/imageView4"
-                android:layout_gravity="right|bottom"
-                android:src="@drawable/logoactivacionvolante" />
-
-        </FrameLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

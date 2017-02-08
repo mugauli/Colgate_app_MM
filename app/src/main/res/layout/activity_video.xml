@@ -12,7 +12,8 @@
         android:background="@drawable/fondo16"
         android:layout_margin="30dp"
         android:weightSum="100"
-        android:padding="75dp">
+        android:padding="50dp"
+        android:id="@+id/lyPrincipal">
 
         <TextView
             android:layout_width="fill_parent"
@@ -21,16 +22,15 @@
             android:text="El Régimen que va más con tu sonrisa es:"
             android:id="@+id/tvTituloVideo"
             android:width="80dp"
-            android:layout_weight="80"
-            android:layout_marginLeft="20dp"
+            android:layout_weight="41"
             android:textColor="@android:color/white"
             android:textIsSelectable="false"
             android:textSize="40dp"
             android:textAlignment="center" />
 
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:layout_weight="20">
 
             <VideoView
@@ -42,17 +42,31 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="100" />
 
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="39"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="10"
+                android:layout_weight="12"></LinearLayout>
+
             <ImageView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
                 android:id="@+id/btnIr"
                 android:layout_gravity="right|bottom"
                 android:src="@drawable/inicio"
 
-                android:layout_weight="7"
-                android:layout_margin="10dp"
-                android:layout_marginRight="30dp" />
-        </FrameLayout>
+                android:layout_weight="88" />
+        </LinearLayout>
 
     </LinearLayout>
 

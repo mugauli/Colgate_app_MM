@@ -10,121 +10,139 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@drawable/fondo16"
+        android:weightSum="100"
         android:layout_margin="30dp"
-        android:weightSum="90"
+        android:id="@+id/lyPrincipal"
         android:padding="50dp">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:weightSum="100">
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:layout_gravity="center_horizontal|top"
-                android:weightSum="10"
-                android:layout_margin="30dp">
+                android:weightSum="100"
+                android:layout_weight="60">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
                     android:id="@+id/ImgDatos"
                     android:src="@drawable/diente"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_margin="10dp" />
+                    android:layout_margin="10dp"
+                    android:layout_weight="85" />
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:text="Considero como prioridad en mi cuidado bucal:"
                     android:id="@+id/tvTitulo"
                     android:textColor="#ffffff"
-                    android:textSize="50dp"
-                    android:layout_margin="10dp" />
+                    android:textSize="50sp"
+                    android:layout_weight="15"
+                    android:textIsSelectable="false" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="600dp"
-                android:layout_height="140dp"
-                android:layout_gravity="center"
-                android:layout_weight="30"
-                android:weightSum="10"
-                android:layout_marginTop="60dp">
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="40"
+                android:weightSum="100">
 
                 <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:weightSum="100"
-                    android:padding="10dp"
-                    android:id="@+id/llOpcion1">
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="45"></LinearLayout>
 
-                    <ImageView
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="13"
+                    android:weightSum="10"
+                    android:layout_margin="20dp">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
-                        android:id="@+id/imageView"
-                        android:src="@drawable/vineta"
-                        android:layout_weight="95" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="La apariencia de mi boca y sonrisa."
-                        android:id="@+id/tvOpcion1"
                         android:layout_weight="5"
+                        android:weightSum="100"
                         android:padding="10dp"
-                        android:textColor="#ffffff"
-                        android:textSize="23dp"
-                        android:paddingLeft="0dp"
-                        android:textIsSelectable="false" />
+                        android:id="@+id/llOpcion1">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView"
+                            android:src="@drawable/vineta"
+                            android:layout_weight="93" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="La apariencia de mi boca y sonrisa."
+                            android:id="@+id/tvOpcion1"
+                            android:layout_weight="7"
+                            android:textColor="#ffffff"
+                            android:textSize="25sp"
+                            android:paddingLeft="6dp"
+                            android:textIsSelectable="false"
+                            android:layout_gravity="center_vertical"
+                            android:paddingTop="15dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="5"
+                        android:weightSum="100"
+                        android:padding="10dp"
+                        android:id="@+id/llOpcion2">
+
+                        <ImageView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:id="@+id/imageView2"
+                            android:src="@drawable/vineta"
+                            android:layout_weight="93" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:text="La salud y prevención de problemas dentales."
+                            android:id="@+id/tvOpcion2"
+                            android:layout_weight="7"
+                            android:textSize="25sp"
+                            android:textColor="#ffffff"
+                            android:paddingLeft="6dp" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="5"
-                    android:weightSum="100"
-                    android:padding="10dp"
-                    android:id="@+id/llOpcion2">
-
-                    <ImageView
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:id="@+id/imageView2"
-                        android:src="@drawable/vineta"
-                        android:layout_weight="95" />
-
-                    <TextView
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="La salud y prevención de problemas dentales"
-                        android:id="@+id/tvOpcion2"
-                        android:layout_weight="5"
-                        android:padding="10dp"
-                        android:textSize="23dp"
-                        android:textColor="#ffffff" />
-
-                </LinearLayout>
-
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageView4"
+                    android:layout_gravity="right|bottom"
+                    android:src="@drawable/logoactivacionvolante"
+                    android:layout_weight="42" />
             </LinearLayout>
 
-            <ImageView
-                android:layout_width="280dp"
-                android:layout_height="146dp"
-                android:id="@+id/imageView4"
-                android:layout_gravity="right|bottom"
-                android:src="@drawable/logoactivacionvolante" />
-
-        </FrameLayout>
+        </LinearLayout>
 
     </LinearLayout>
 

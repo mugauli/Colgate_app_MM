@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
@@ -17,7 +18,7 @@ public class caminoMPSS extends AppCompatActivity {
     boolean aa = false,bb = false,cc= false, dd = false;
     private int [] aux = new int[2];
     private int [] aux2  = new int[2];
-
+    public int tamanoPregunta = 0,tamanoRadio = 0,marginRadio=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,8 +47,7 @@ public class caminoMPSS extends AppCompatActivity {
                 aa = true;
                 aux[0] = 1;
 
-
-                //siguiente();
+                siguiente();
             }
         });
         radioA2.setOnClickListener(new View.OnClickListener() {
@@ -60,7 +60,7 @@ public class caminoMPSS extends AppCompatActivity {
                 radioA1.setTextColor(Color.BLACK);
                 aa = true;
                 aux[0] = 2;
-                //siguiente();
+                siguiente();
 
             }
         });
@@ -72,7 +72,7 @@ public class caminoMPSS extends AppCompatActivity {
                 radioB2.setTextColor(Color.BLACK);
                 bb = true;
                 aux[1] = 1;
-                //siguiente();
+                siguiente();
             }
         });
         radioB2.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +84,7 @@ public class caminoMPSS extends AppCompatActivity {
                 aux[1] = 2;
                 a.setTextColor(Color.WHITE);
                 radioB1.setTextColor(Color.BLACK);
-                //();
+                siguiente();
             }
         });
         radioC1.setOnClickListener(new View.OnClickListener() {
@@ -95,7 +95,7 @@ public class caminoMPSS extends AppCompatActivity {
                 radioC2.setTextColor(Color.BLACK);
                 cc = true;
                 aux2[0] = 1;
-                //siguiente();
+                siguiente();
             }
         });
         radioC2.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +108,7 @@ public class caminoMPSS extends AppCompatActivity {
                 a.setTextColor(Color.WHITE);
                 radioC1.setTextColor(Color.BLACK);
 
-                //siguiente();
+                siguiente();
             }
         });
         radioD1.setOnClickListener(new View.OnClickListener() {
@@ -119,7 +119,7 @@ public class caminoMPSS extends AppCompatActivity {
                 radioD2.setTextColor(Color.BLACK);
                 dd = true;
                 aux2[1] = 1;
-                //siguiente();
+                siguiente();
             }
         });
         radioD2.setOnClickListener(new View.OnClickListener() {
@@ -131,7 +131,7 @@ public class caminoMPSS extends AppCompatActivity {
                 radioD1.setTextColor(Color.BLACK);
                 dd = true;
                 aux2[1] = 2;
-                //siguiente();
+                siguiente();
             }
         });
 
@@ -141,31 +141,80 @@ public class caminoMPSS extends AppCompatActivity {
 
 
         int height = metrics.heightPixels; // alto absoluto en pixels
-        Log.e("tamaño", "-" + height);
+        Log.e("DBG: ","Tamaño "+height);
         TextView tvTituloVideo = (TextView) findViewById(R.id.tvTituloVideo);
 
         TextView tvOpcion1 = (TextView) findViewById(R.id.tvOpcion1);
         TextView tvOpcion2 = (TextView) findViewById(R.id.tvOpcion2);
-        //LinearLayout lytTitulo = (LinearLayout) findViewById(R.id.lytTitulo);
+        LinearLayout lyPrincipal = (LinearLayout) findViewById(R.id.lyPrincipal);
 
-        if (height > 800) {
-            if (tvTituloVideo != null) tvTituloVideo.setTextSize(17);
-            if (tvOpcion1 != null) {
-                tvOpcion1.setTextSize(13);
-                tvOpcion1.setPadding(0, 0, 0, 0);
-                //llOpcion1.setPadding(0, 0, 0, 0);
-            }
-            if (tvOpcion2 != null) {
-                tvOpcion2.setTextSize(13);
-                tvOpcion2.setPadding(0, 0, 0, 0);
-                // llOpcion2.setPadding(0,0,0,0);
-            }
-           /* if (lytTitulo != null) lytTitulo.setPadding(0,0,0,0);
 
-        }else
-        {*/
+        //Tamaño
+
+        if(height<500) {
+
+            Log.e("DBG: ",height + " < 500");
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
+            if (lyPrincipal != null) lyPrincipal.setPadding(21,10,40,10);
+
+            tamanoPregunta = 10;
+            tamanoRadio = 12;
+
+        } else if(height<580 && height>499) {
+
+            Log.e("DBG "+height,"580 > " + height + " > 499");
+
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,39);
+            if (lyPrincipal != null) lyPrincipal.setPadding(60,10,60,10);
+
+            tamanoPregunta = 22;
+            tamanoRadio = 28;
+
 
         }
+        else if(height>700 && height< 1200 ) {
+
+            Log.e("DBG: "," 700 < " + height + " < 1200");
+
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,42);
+            if (lyPrincipal != null) lyPrincipal.setPadding(70,10,70,10);
+
+            tamanoPregunta = 28;
+            tamanoRadio = 30;
+        }
+        else if(height>1200) {
+
+            Log.e("DBG: ", height +" > 1200");
+
+            if (tvTituloVideo != null) tvTituloVideo.setTextSize(TypedValue.COMPLEX_UNIT_SP,25);
+            if (lyPrincipal != null) lyPrincipal.setPadding(70,10,70,10);
+
+            tamanoPregunta = 10;
+            tamanoRadio = 12;
+
+        }
+
+        TextView ask1 = (TextView) findViewById(R.id.ask1);
+        TextView ask2 = (TextView) findViewById(R.id.ask2);
+        TextView ask3 = (TextView) findViewById(R.id.ask3);
+        TextView ask4 = (TextView) findViewById(R.id.ask4);
+
+        if(ask1 != null) ask1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoPregunta);
+        if(ask2 != null) ask2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoPregunta);
+        if(ask3 != null) ask3.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoPregunta);
+        if(ask4 != null) ask4.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoPregunta);
+
+         if(radioA1 != null){ radioA1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio); radioA1.setPadding(marginRadio,0,0,0);}
+         if(radioA2 != null){ radioA2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio); radioA2.setPadding(0,0,marginRadio,0);}
+         if(radioB1 != null){ radioB1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio); radioB1.setPadding(marginRadio,0,0,0);}
+         if(radioB2 != null){ radioB2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio); radioB2.setPadding(0,0,marginRadio,0);}
+         if(radioC1 != null){ radioC1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio); radioC1.setPadding(marginRadio,0,0,0);}
+         if(radioC2 != null){ radioC2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio); radioC2.setPadding(0,0,marginRadio,0);}
+         if(radioD1 != null){ radioD1.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio); radioD1.setPadding(marginRadio,0,0,0);}
+         if(radioD2 != null){ radioD2.setTextSize(TypedValue.COMPLEX_UNIT_SP,tamanoRadio); radioD2.setPadding(0,0,marginRadio,0);}
+
+
+
     }
     public void siguiente()
     {
