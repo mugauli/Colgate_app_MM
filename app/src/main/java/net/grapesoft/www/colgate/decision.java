@@ -103,7 +103,24 @@ public class decision extends AppCompatActivity {
                 tvOpcion2.setPadding(6,16,0,0);
             }
         }
-      else if(height>700 && height< 1200 ) {
+        else if(height < 1200 && height >= 900) {
+
+            Log.e("DBG: ", " 900 < " + height + " < 1200");
+
+            if (lyPrincipal != null) lyPrincipal.setPadding(40,40,40,40);
+            if (tvTitulo  != null) tvTitulo.setTextSize(TypedValue.COMPLEX_UNIT_SP,20);
+            if (tvOpcion1 != null) {
+                tvOpcion1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
+                tvOpcion1.setPadding(4,15,0,0);
+            }
+            if (tvOpcion2 != null)
+            {
+                tvOpcion2.setTextSize(TypedValue.COMPLEX_UNIT_SP,30);
+                tvOpcion2.setPadding(4,15,0,0);
+            }
+
+        }
+      else if(height>900 && height< 1200 ) {
 
           //  Log.e("DBG: "," 700 < " + height + " < 1200");
 

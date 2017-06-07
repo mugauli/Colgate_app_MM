@@ -77,7 +77,9 @@ public class tusdatos extends AppCompatActivity {
 
 //Tamaño del texto
         int height = metrics.heightPixels; // alto absoluto en pixels
+
         Log.e("DBG: ","Tamaño "+height);
+
         TextView tvEdad = (TextView) findViewById(R.id.tvEdad);
         TextView tvSexo = (TextView) findViewById(R.id.tvSexo);
 
@@ -86,7 +88,7 @@ public class tusdatos extends AppCompatActivity {
         LinearLayout lyPrincipal = (LinearLayout) findViewById(R.id.lyPrincipal);
 
 
-        if(height>730)
+        if(height > 730)
         {
             if (lytSexo != null) lytSexo.setPadding(35,35,35,35);
             if (lytEdad != null) lytEdad.setPadding(35,35,35,35);
@@ -94,7 +96,7 @@ public class tusdatos extends AppCompatActivity {
 
         //Tamaño
 
-        if(height<500) {
+        if(height < 500) {
 
             Log.e("DBG: ",height + " < 500");
 
@@ -105,7 +107,7 @@ public class tusdatos extends AppCompatActivity {
             tamanoTextoSpinner= 12;
 
 
-        } else if(height<580 && height>499) {
+        } else if(height < 580 && height >= 500) {
 
             Log.e("DBG: "+height,"580 > " + height + " > 499");
 
@@ -116,9 +118,20 @@ public class tusdatos extends AppCompatActivity {
             tamanoTextoSpinner= 39;
 
         }
-        else if(height>700 && height< 1200 ) {
+        else if(height < 900 && height >= 700) {
 
-            Log.e("DBG: "," 700 < " + height + " < 1200");
+            Log.e("DBG: "," 700 < " + height + " < 900");
+
+            if (tvEdad != null){ tvEdad.setTextSize(40); tvEdad.setPadding(0,5,0,5);}
+            if (tvSexo != null){ tvSexo.setTextSize(40); tvSexo.setPadding(0,5,0,5);}
+            if (lyPrincipal != null) lyPrincipal.setPadding(80,70,80,70);
+
+            tamanoTextoSpinner= 24;
+
+        }
+        else if(height < 1200 && height >= 900) {
+
+            Log.e("DBG: "," 900 < " + height + " < 1200");
 
             if (tvEdad != null){ tvEdad.setTextSize(50); tvEdad.setPadding(0,5,0,5);}
             if (tvSexo != null){ tvSexo.setTextSize(50); tvSexo.setPadding(0,5,0,5);}
@@ -131,8 +144,8 @@ public class tusdatos extends AppCompatActivity {
 
             Log.e("DBG: ", height +" > 1200");
 
-            if (tvEdad != null) tvEdad.setTextSize(19);
-            if (tvSexo != null) tvSexo.setTextSize(19);
+            if (tvEdad != null) tvEdad.setTextSize(20);
+            if (tvSexo != null) tvSexo.setTextSize(20);
 
             tamanoTextoSpinner= 17;
 
